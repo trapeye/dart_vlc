@@ -58,7 +58,7 @@ void PlayerCreate(int32_t id, int32_t video_width, int32_t video_height,
   auto player = g_players->Get(id);
   if (!player) {
     g_players->Create(
-        id, std::move(std::make_unique<Player>(args)));
+        id, std::move(std::make_unique<Player>(std::vector<std::string>{})));
     player = g_players->Get(id);
   }
   if (video_width > 0 && video_height > 0) {
