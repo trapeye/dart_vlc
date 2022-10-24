@@ -37,7 +37,7 @@ Player::Player(const std::vector<std::string>& cmd_arguments) {
   vlc_media_list_ = VLC::MediaList(vlc_instance_);
   vlc_media_list_player_.setMediaPlayer(vlc_media_player_);
   state_ = std::make_unique<PlayerState>();
-  vlc_media_player_.setVolume(100);
+  //vlc_media_player_.setVolume(100);
 }
 
 void Player::Open(std::shared_ptr<MediaSource> media_source, bool auto_start) {
